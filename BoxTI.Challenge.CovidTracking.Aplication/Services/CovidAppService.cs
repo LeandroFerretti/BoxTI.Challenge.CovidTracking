@@ -34,11 +34,11 @@ namespace Aplication.Services
             {
                 if (paisCovid.Country_text != null)
                 {
-                    if (_covidRepository.PaisJaRegistrado(paisCovid.Country_text))
-                        throw new ArgumentException($"Não é possivel registrar o Pais: {paisCovid.Country_text}.\n O mesmo ja se encontra registrado na base de dados.");
-                    
+                    if (!_covidRepository.PaisJaRegistrado(paisCovid.Country_text))
+                    {
                     CovidPais covidPais = new(ConverterDto(paisCovid));
                     _covidRepository.Cadastrar(covidPais);
+                    }
                 }
             }
         }
