@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BoxTI.Challenge.CovidTracking.Connection\BoxTI.Challenge.CovidTracking.Connection.csproj" />
+    <ProjectReference Include="..\BoxTI.Challenge.CovidTracking.Domain\BoxTI.Challenge.CovidTracking.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
